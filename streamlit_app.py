@@ -285,7 +285,7 @@ def main():
             st.markdown("<div style='text-align:center;'>", unsafe_allow_html=True)
 
             query = st.text_input(
-                "",
+                "Query",
                 placeholder="Ask a question about the Statesman archive...",
                 label_visibility="collapsed",
             )
