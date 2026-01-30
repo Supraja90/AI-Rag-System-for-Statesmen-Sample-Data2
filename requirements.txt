@@ -1,0 +1,16 @@
+ujson
+tqdm
+pillow
+pymupdf
+pdfminer.six
+sentence-transformers
+faiss-cpu
+rank-bm25
+transformers
+torch
+easyocr
+numpy
+nltk
+pyyaml
+requests
+

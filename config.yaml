@@ -1,0 +1,36 @@
+paths:
+  pdf_dir: ../data
+  storage: storage
+  chunks: storage/chunks
+  images: storage/images
+  embeddings: storage/embeddings
+  logs: storage/logs
+
+models:
+  text_embed: sentence-transformers/all-MiniLM-L6-v2
+  clip_image: openai/clip-vit-base-patch32
+  reranker: BAAI/bge-reranker-large
+
+retrieval:
+  chunk_chars: 600
+  chunk_overlap: 100
+  use_sentence_split: true
+
+  dense_top_k: 50
+  sparse_top_k: 50
+  return_k: 8
+  hybrid_alpha: 0.55
+
+  use_reranker: true
+  rerank_top_n: 20
+
+index:
+  type: flat
+  hnsw_m: 32
+  ivf_nlist: 4096
+  metric: ip
+
+runtime:
+  ocr_only_if_needed: true
+  ocr_text_threshold: 50
+  gpu: auto
